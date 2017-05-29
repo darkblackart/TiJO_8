@@ -1,0 +1,32 @@
+C:\git\TiJO_8>npm run stryker
+
+> TiJO_08@1.0.0 stryker C:\git\TiJO_8
+> stryker run stryker.conf.js
+
+[2017-05-29 14:31:17.728] [INFO] InputFileResolver - Found 1 of 2 file(s) to be mutated.
+[2017-05-29 14:31:17.732] [INFO] SandboxCoordinator - Starting initial test run. This may take a while.
+[2017-05-29 14:31:18.223] [INFO] Stryker - Initial test run succeeded. Ran 11 tests in 0 seconds.
+[2017-05-29 14:31:18.254] [INFO] Stryker - 22 Mutant(s) generated
+[2017-05-29 14:31:18.263] [INFO] SandboxCoordinator - Creating 6 test runners (based on CPU count)
+Mutation testing  [==================================================] 100% (ETC 0.0s)[20 killed] [1 survived] [0 no coverage] [1 timeout] [0 error]
+
+Mutant survived!
+C:\git\TiJO_8\app\app.js: line 19:20
+Mutator: BinaryOperator
+-       for (var i = 0; i <= x; i++) {
++       for (var i = 0; i < x; i++) {
+
+Tests ran:
+    returnOnlyLetter should return 'cos'
+    returnOnlyLetter should return 'lt'
+    returnOnlyLetter should return ''
+  and 1 more tests!
+
+22 total mutants.
+1 mutants survived.
+1 mutants timed out.
+20 mutants killed.
+Ran 2.09 tests per mutant on average.
+Mutation score based on covered code: 95.45%
+Mutation score based on all code: 95.45%
+[2017-05-29 14:31:26.623] [INFO] Stryker - Done in 8 seconds.
