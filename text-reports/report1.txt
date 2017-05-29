@@ -1,0 +1,101 @@
+C:\git\TiJO_8>npm run stryker
+
+> TiJO_08@1.0.0 stryker C:\git\TiJO_8
+> stryker run stryker.conf.js
+
+[2017-05-29 14:28:09.482] [INFO] InputFileResolver - Found 1 of 2 file(s) to be mutated.
+[2017-05-29 14:28:09.486] [INFO] SandboxCoordinator - Starting initial test run. This may take a while.
+[2017-05-29 14:28:09.977] [INFO] Stryker - Initial test run succeeded. Ran 3 tests in 0 seconds.
+[2017-05-29 14:28:10.009] [INFO] Stryker - 22 Mutant(s) generated
+[2017-05-29 14:28:10.018] [INFO] SandboxCoordinator - Creating 6 test runners (based on CPU count)
+Mutation testing  [==================================================] 100% (ETC 0.0s)[13 killed] [8 survived] [0 no coverage] [1 timeout] [0 error]
+
+Mutant survived!
+C:\git\TiJO_8\app\app.js: line 3:20
+Mutator: BlockStatement
+-       if (isNaN(num)) {
+-           return false;
+-       }
++       if (isNaN(num)) {
++   }
+
+Tests ran:
+    reverseNumber should reverse number
+
+Mutant survived!
+C:\git\TiJO_8\app\app.js: line 12:8
+Mutator: RemoveConditionals
+-       if (typeof str !== 'string') {
++       if (false) {
+
+Tests ran:
+    returnOnlyLetter should return 'cos'
+
+Mutant survived!
+C:\git\TiJO_8\app\app.js: line 3:8
+Mutator: RemoveConditionals
+-       if (isNaN(num)) {
++       if (false) {
+
+Tests ran:
+    reverseNumber should reverse number
+
+Mutant survived!
+C:\git\TiJO_8\app\app.js: line 12:33
+Mutator: BlockStatement
+-       if (typeof str !== 'string') {
+-           return false;
+-       }
++       if (typeof str !== 'string') {
++   }
+
+Tests ran:
+    returnOnlyLetter should return 'cos'
+
+Mutant survived!
+C:\git\TiJO_8\app\app.js: line 19:20
+Mutator: BinaryOperator
+-       for (var i = 0; i <= x; i++) {
++       for (var i = 0; i < x; i++) {
+
+Tests ran:
+    returnOnlyLetter should return 'cos'
+
+Mutant survived!
+C:\git\TiJO_8\app\app.js: line 20:12
+Mutator: RemoveConditionals
+-           if (az.test(temp[i])) { //sprawdza czy kolejne znaki znajduja sie w przedziale "az"
++           if (true) { //sprawdza czy kolejne znaki znajduja sie w przedziale "az"
+
+Tests ran:
+    returnOnlyLetter should return 'cos'
+
+Mutant survived!
+C:\git\TiJO_8\app\app.js: line 30:8
+Mutator: RemoveConditionals
+-       if (pattern.test(email)) {
++       if (true) {
+
+Tests ran:
+    isEmail should return true
+
+Mutant survived!
+C:\git\TiJO_8\app\app.js: line 32:11
+Mutator: BlockStatement
+-       } else {
+-           return false;
+-       }
++       } else {
++   }
+
+Tests ran:
+    isEmail should return true
+
+22 total mutants.
+8 mutants survived.
+1 mutants timed out.
+13 mutants killed.
+Ran 1.09 tests per mutant on average.
+Mutation score based on covered code: 63.64%
+Mutation score based on all code: 63.64%
+[2017-05-29 14:28:18.394] [INFO] Stryker - Done in 8 seconds.
